@@ -6,15 +6,15 @@
 #    By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/27 21:03:57 by yooshima          #+#    #+#              #
-#    Updated: 2025/01/17 15:57:21 by yooshima         ###   ########.fr        #
+#    Updated: 2025/01/18 14:01:46 by yooshima         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= trap
+NAME		= animal
 CXX			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS		= $(SRCS:.cpp=.o)
 
 all:	$(NAME)
