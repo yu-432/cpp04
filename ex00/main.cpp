@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:59:55 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/18 14:17:41 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/19 18:18:26 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int main() {
   std::cout << "=====Wrong test=====" << std::endl;
   const WrongAnimal* meta2 = new WrongAnimal();
   const WrongAnimal* i2 = new WrongCat();
-  std::cout << i2->getType() << " " << std::endl;
+  std::cout << meta2->getType() << std::endl;
+  std::cout << i2->getType() << std::endl;
   meta2->makeSound();
   i2->makeSound();  // will output the cat sound!
 
