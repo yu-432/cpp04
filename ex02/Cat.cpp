@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:32:02 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/19 17:37:17 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:10:29 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 #include "Brain.hpp"
 
 Cat::Cat() {
-  std::cout << "Cat " << _type << " default constructor called!" << std::endl;
+  std::cout << "[Cat] " << _type << " default constructor called!" << std::endl;
   _type = "Cat";
   _brain = new Brain();
 }
 
 Cat::Cat(const Cat& src) : Animal(src) {
-  std::cout << "Cat " << _type << " copy constructor called!" << std::endl;
+  std::cout << "[Cat] " << _type << " copy constructor called!" << std::endl;
   _brain = new Brain(*src._brain);
 }
 
 Cat& Cat::operator=(const Cat& src) {
-  std::cout << "Cat " << _type << " copy assigment constructor called!"
+  std::cout << "[Cat] " << _type << " copy assigment constructor called!"
             << std::endl;
   if (this != &src) {
     _type = src._type;
@@ -38,7 +38,7 @@ Cat& Cat::operator=(const Cat& src) {
 }
 
 Cat::~Cat() {
-  std::cout << "Cat " << _type << " default destructor called!" << std::endl;
+  std::cout << "[Cat] " << _type << " default destructor called!" << std::endl;
   delete _brain;
 }
 

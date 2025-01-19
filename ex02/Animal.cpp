@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:08:12 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/19 20:48:44 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:11:27 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 #include <iostream>
 
 Animal::Animal() : _type("Animal") {
-  std::cout << "Animal " << _type << " default constructor called!"
+  std::cout << "[Animal] " << _type << " default constructor called!"
             << std::endl;
 }
 
 Animal::Animal(const Animal& src) {
-  std::cout << "Animal " << _type << " copy constructor called!" << std::endl;
+  std::cout << "[Animal] " << _type << " copy constructor called!" << std::endl;
   *this = src;
 }
 
 Animal& Animal::operator=(const Animal& src) {
-  std::cout << "Animal " << _type << " copy assignment constructor called!"
+  std::cout << "[Animal] " << _type << " copy assignment constructor called!"
             << std::endl;
   if (this != &src) {
     _type = src._type;
@@ -34,9 +34,7 @@ Animal& Animal::operator=(const Animal& src) {
 }
 
 Animal::~Animal() {
-  std::cout << "Animal " << _type << " default destructor called!" << std::endl;
+  std::cout << "[Animal] " << _type << " default destructor called!" << std::endl;
 }
-
-// void Animal::makeSound() const { std::cout << "!!!" << std::endl; }
 
 const std::string& Animal::getType() const { return _type; }
