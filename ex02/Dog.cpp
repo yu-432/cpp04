@@ -6,14 +6,15 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:47:27 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/19 21:12:31 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:40:19 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include "Brain.hpp"
 
 #include <iostream>
+
+#include "Brain.hpp"
 
 Dog::Dog() {
   std::cout << "[Dog] " << _type << " default constructor called!" << std::endl;
@@ -27,11 +28,10 @@ Dog::Dog(const Dog& src) : Animal(src) {
 }
 
 Dog& Dog::operator=(const Dog& src) {
-  std::cout << "[Dog] " << _type << " copy assigment constructor called!" << std::endl;
-  if (this != &src) {
-    _type = src._type;
-  }
-  _brain = src._brain;
+  std::cout << "[Dog] " << _type << " copy assignment constructor called!"
+            << std::endl;
+  Animal::operator=(src);
+  *_brain = *src._brain;
   return *this;
 }
 
@@ -40,6 +40,4 @@ Dog::~Dog() {
   delete _brain;
 }
 
-void Dog::makeSound() const{
-  std::cout << "Woof" << std::endl;
-}
+void Dog::makeSound() const { std::cout << "Woof" << std::endl; }
