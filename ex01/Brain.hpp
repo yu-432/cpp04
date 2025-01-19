@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 15:01:50 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/18 15:28:04 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:37:37 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ class Brain {
   Brain(const Brain& src);
   ~Brain();
   Brain& operator=(const Brain& src);
-  std::string* _ideas;
+  std::string _ideas[100];
+
+ private:
+  const static size_t _ideasSize = 100;
 };
 
 #endif
