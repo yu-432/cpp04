@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:08:12 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/19 21:11:27 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:11:14 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ Animal& Animal::operator=(const Animal& src) {
 }
 
 Animal::~Animal() {
-  std::cout << "[Animal] " << _type << " default destructor called!" << std::endl;
+  std::cout << "[Animal] " << _type << " default destructor called!"
+            << std::endl;
 }
 
 const std::string& Animal::getType() const { return _type; }

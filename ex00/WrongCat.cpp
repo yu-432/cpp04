@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:32:02 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/19 20:19:54 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:08:44 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ WrongCat::WrongCat(const WrongCat& src) : WrongAnimal(src) {
 WrongCat& WrongCat::operator=(const WrongCat& src) {
   std::cout << "[WrongCat] " << _type << " copy assignment constructor called!"
             << std::endl;
-  if (this != &src) {
-    _type = src._type;
-  }
+  WrongAnimal::operator=(src);
   return *this;
 }
 

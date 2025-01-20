@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:32:02 by yooshima          #+#    #+#             */
-/*   Updated: 2025/01/19 20:18:43 by yooshima         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:12:27 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,9 @@ Cat::Cat(const Cat& src) : Animal(src) {
 }
 
 Cat& Cat::operator=(const Cat& src) {
-  std::cout << "[Cat] " << _type << " copy assigment constructor called!"
+  std::cout << "[Cat] " << _type << " copy assignment constructor called!"
             << std::endl;
-  if (this != &src) {
-    _type = src._type;
-  }
+  Animal::operator=(src);
   return *this;
 }
 
